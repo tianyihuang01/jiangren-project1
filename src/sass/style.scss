@@ -18,6 +18,28 @@ body{
     font-size: 15px;
 }
 
+.card{
+    
+    width: 90%;
+    max-width: 1032px * 0.9;
+
+    height: 500px;
+
+    // center aligned
+    // https://stackoverflow.com/questions/39031224/how-to-center-cards-in-bootstrap-4
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+    
+    // border-color: $primarycolor; //border color
+    border-radius: 15px; //radius
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); //shadow
+
+    &-img-top{
+        height: 55%;
+    }
+}
+
 
 
 // .align{
