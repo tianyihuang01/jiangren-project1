@@ -1,0 +1,374 @@
+$primarycolor: #2eca7f;
+
+.theme{
+    &--color{
+        color: $primarycolor;
+    }
+
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer{
+    flex-shrink: 0;
+    text-align: center;
+    font-size: 15px;
+}
+
+.card{
+    
+    width: 90%;
+    max-width: 1032px * 0.9;
+
+    height: 500px;
+
+    // center aligned
+    // https://stackoverflow.com/questions/39031224/how-to-center-cards-in-bootstrap-4
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+    
+    // border-color: $primarycolor; //border color
+    border-radius: 15px; //radius
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); //shadow
+
+    &-img-top{
+        height: 55%;
+        background-color: $primarycolor;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    &-img-overlay{
+        position: absolute;
+        left:33%;
+        top:10%;
+    }
+
+}
+
+.profile{
+    &__avatar{
+        position: absolute;
+        left: 7%;
+        top: 8%;
+        width: 250px;
+        border: solid white 5px; //add white border
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); //shadow
+    }
+    &__name{
+        font-size: 3rem;
+        font-weight: 500;
+    }
+    &__title{
+        font-size: 1.25rem;
+        margin-top: 8px;
+    }
+    &__media{
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        padding-left: 8px;
+    }
+    &__content{
+        padding: 20px 50px 50px;
+
+        &--header{
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    }
+}
+
+
+// https://stackoverflow.com/questions/1713048/how-to-style-dt-and-dd-so-they-are-on-the-same-line
+dl {
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+  }
+  dt {
+    float: left;
+    width: 30%;
+    /* adjust the width; make sure the total of both is 100% */
+    padding: 0;
+    margin: 0;
+    padding: 3px 0;
+  }
+  dd {
+    float: left;
+    width: 70%;
+    /* adjust the width; make sure the total of both is 100% */
+    padding: 0;
+    margin: 0;
+    padding: 3px 0;
+  }
+
+// .align{
+//     &--right{
+//         text-align: right;
+//     }
+// }
+
+// *{
+//     font-family: Arial, Helvetica, sans-serif;
+// }
+
+// .card {
+//     margin: 20px;
+//     position: relative;
+//     max-width: 400px;
+//     max-height: fit-content;
+//     text-align: left;
+//     // box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+//     // transition: 0.3s;
+//     /* color: white; */
+
+//     &__detail{
+//         max-width: 500px;
+//         max-height: 400px;
+        
+//     }
+// }
+
+// .image{
+//     // padding-left: -2px;
+//     width:100%;
+//     &__icon{
+//         &--centre{
+//             // https://www.w3schools.com/howto/howto_css_image_center.asp
+//             // display: block;
+//             // margin: auto;
+//             // margin-left: auto;
+//             // margin-right: auto;
+//             width: 25px;
+//             // https://stackoverflow.com/questions/9980531/center-image-in-div-horizontally
+//             position: absolute;
+//             top: 50%;
+//             left: 50%;
+//             margin-left: -12.5px;
+//             margin-top: -23px;            
+//         }
+
+//     }
+
+//     &__clip{
+//         // https://stackoverflow.com/questions/9545977/how-to-show-image-at-half-or-crop-its-own-size
+//         // position:absolute;
+//         // clip:rect(0px,150px,200px,0px);
+//         // https://themetry.com/css-image-cropping/
+//         width: 150px; 
+//         height: 250px;
+//         overflow: hidden;
+//         border-top-left-radius: 5%;
+//         border-bottom-left-radius: 5%;
+//         object-fit: cover;
+//         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+//     }
+// }
+
+
+
+// .label{
+//     font-size: 12px;
+//     position: absolute;
+//     top: 12%;
+//     right: 10%;
+//     padding-left:8px;
+//     padding-right:8px;
+//     padding-top: 2px;
+//     padding-bottom: 2px;
+//     text-align:center;
+//     border-radius:10%;
+//     &--grey{
+//         background-color: rgb(226, 226, 226);
+//     }
+//     &--red{
+//         background-color:red;
+//         color: white;
+//     }
+// }
+
+// .container{
+//     padding: 4px 16px;
+//     box-shadow:  15px 15px 27px #e1e1e3;
+//     &__top{
+//         display: flex;
+//         flex-wrap: wrap;
+//         align-items: flex-start;
+//     }
+
+//     &__bl{
+//         position: absolute;
+//         bottom: 15%;
+//         left: 1%;
+//         color:white;
+//     }
+
+//     &__br{
+//         position: absolute;
+//         bottom: 15%;
+//         right: 15%;
+//         color:white;
+//     }
+    
+//     &__bc{
+//         position: absolute;
+//         bottom: 20%;
+//         right: 30%;
+//         color:white;
+//     }
+
+//     &__bc--2{
+//         position: absolute;
+//         bottom: 20%;
+//         right: 28%;
+//         color:white;
+//     }
+
+//     &__vertical{
+//         // padding: 10px;
+//         display: flex;
+//         flex-wrap: nowrap;
+//         align-items: stretch;
+//     }
+
+//     &__vertical--2{
+//         padding: 60px 16px 0px;
+//         box-shadow:  15px 15px 27px #e1e1e3;
+//         border-top-right-radius: 5%;
+//         border-bottom-right-radius: 5%;
+//     }
+
+//     &__crop{
+//         max-width: 150px; 
+//         // box-sizing: border-box;
+//     }
+    
+// }
+
+// .border-line{
+//     border-left: solid green 5px;
+    
+// }
+
+// .desc{
+//     margin-left: 20px;
+     
+
+//     &__title{
+//         font-size: 25px;
+//     }
+
+//     &__date{
+//         font-size: 12px;
+//         font: bold;
+//         color: green;
+//     }
+
+//     &__content{
+//         font-size: 15px; 
+//     }
+
+//     &__note{
+//         font-size:12px;
+//         color: lightgrey;
+//     }
+
+//     &__icon{
+//         font-size: 15px;
+//         color: white;
+//     }
+
+// }
+
+// .button{
+//     font: bold;
+//     color:white;
+
+//     border-radius:10px;
+//     background-image: linear-gradient(to bottom right, rgb(56, 56, 231), rgb(101, 101, 248));
+//     border: none;
+    
+//     padding-left: 20px;
+//     padding-right: 20px;
+//     padding-bottom: 10px;
+//     padding-top: 10px;
+//     text-align: center;
+
+//     &__br{
+//         position: absolute;
+//         bottom: 12%;
+//         right: 10%;
+//     }
+
+//     &--2{
+//         font: bold;
+//         color:white;
+//         color: blue;
+//         background-image: none;
+//         background-color: white;
+//         border: none;
+//         text-align: center;
+//     }
+    
+// }
+
+
+
+// // https://css-tricks.com/text-fade-read-more/
+// .view-more{
+//     position: absolute;
+//     bottom: 0; 
+//     left: 0;
+//     width: 100%; 
+//     text-align: center; 
+//     margin: 0; padding: 30px 0; 
+
+//     background-image: linear-gradient(to bottom, transparent, white);
+// }
+
+// // https://css-tricks.com/star-ratings/
+// .rating {
+//     unicode-bidi: bidi-override;
+//     direction: rtl;
+//     color: gold;
+// }
+// .rating > span {
+//     display: inline-block;
+//     position: relative;
+//     width: 1.1em;
+// }
+// // .rating > span:hover:before,
+// // .rating > span:hover ~ span:before {
+// //     content: "\2605";
+// //     position: absolute;
+// // }
+
+
+// #place{
+//     background-image: linear-gradient(to top right, rgb(117, 56, 231),  rgb(100, 31, 228));
+//     width: 120px;
+//     height: 95px;
+//     border-radius:10%;
+//     text-align: center;
+//     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+// }
+
+// #picture{
+//     background-image: linear-gradient(to top right, rgb(56, 117, 231),  rgb(87, 131, 212));
+//     width: 120px;
+//     height: 95px;
+//     border-radius:10%;
+//     text-align: center;
+//     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+// }
+
+
+

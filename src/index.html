@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="sass/style.css">
-    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/sass/style.css">
+    <script src="assets/js/bootstrap.js"></script>
 
     <title>Document</title>
 </head>
@@ -43,9 +44,38 @@
     <main>
         <section >
             <div class="card" id="home">
-                <img class="card-img-top">
+                <img class="card-img-top" src="assets/images/main_bg.png">
+                <img class="profile__avatar" src="assets/images/photo.png">
+                <div class="card-img-overlay text-white text-center">
+                  <h2 class="card-title profile__name">John Doe</h2>
+                  <p class="card-text profile__title">Web Designer</p>
+                  <button type="button" class="btn btn-light fa fa-twitter profile__media"></button>
+                  <button type="button" class="btn btn-light fa fa-facebook profile__media"></button>
+                  <button type="button" class="btn btn-light fa fa-instagram profile__media"></button>
+                </div>
                 <div class="card-body">
-                    
+                    <div class="row profile__content">
+                      <div class="col-6">
+                        <h3 class="profile__content--header">About <span class="theme--color">Me</span></h3>
+                        <p class="profile__content--body">Hello! I’m John Doe. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                          Aenean fermentum ullamcorper sem, at placerat dolor volutpat ac.
+                          Duis nulla enim, condimentum nec ultricies.</p>
+                      </div>
+                      <div class="col-6">
+                        <dl>
+                          <dt>Age</dt>
+                          <dd>29</dd>
+                          <dt>Residence</dt>
+                          <dd>Australia</dd>
+                          <dt>Address</dt>
+                          <dd>Level 3 / 57 Coronation Drive, Brisbane</dd>
+                          <dt>e-mail</dt>
+                          <dd><a href="mailto:email@example.com" class="theme--color">info@jiangren.com</a></dd>
+                          <dt>Phone</dt>
+                          <dd>+0123 123 456 789</dd>
+                        </dl>
+                      </div>
+                    </div>
                 </div>
 
             </div>

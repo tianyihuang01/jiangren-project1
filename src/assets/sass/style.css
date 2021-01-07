@@ -1,0 +1,98 @@
+.theme--color {
+  color: #2eca7f;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+}
+
+.footer {
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 15px;
+}
+
+.card {
+  width: 90%;
+  max-width: 928.8px;
+  height: 500px;
+  margin: 0 auto;
+  /* Added */
+  float: none;
+  /* Added */
+  margin-bottom: 10px;
+  /* Added */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.card-img-top {
+  height: 55%;
+  background-color: #2eca7f;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.card-img-overlay {
+  position: absolute;
+  left: 33%;
+  top: 10%;
+}
+
+.profile__avatar {
+  position: absolute;
+  left: 7%;
+  top: 8%;
+  width: 250px;
+  border: solid white 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.profile__name {
+  font-size: 3rem;
+  font-weight: 500;
+}
+.profile__title {
+  font-size: 1.25rem;
+  margin-top: 8px;
+}
+.profile__media {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  padding-left: 8px;
+}
+.profile__content {
+  padding: 20px 50px 50px;
+}
+.profile__content--header {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+dl {
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+}
+
+dt {
+  float: left;
+  width: 30%;
+  /* adjust the width; make sure the total of both is 100% */
+  padding: 0;
+  margin: 0;
+  padding: 3px 0;
+}
+
+dd {
+  float: left;
+  width: 70%;
+  /* adjust the width; make sure the total of both is 100% */
+  padding: 0;
+  margin: 0;
+  padding: 3px 0;
+}
+
+/*# sourceMappingURL=style.css.map */
