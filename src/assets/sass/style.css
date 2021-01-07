@@ -8,6 +8,17 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.nav-link::after {
+  width: 24px;
+}
+.nav--active::after {
+  content: "";
+  border: solid #2eca7f 1px;
+  width: 24px;
+  margin: auto;
+  display: block;
+}
+
 .footer {
   flex-shrink: 0;
   text-align: center;
@@ -15,9 +26,9 @@ body {
 }
 
 .card {
+  display: none;
   width: 90%;
   max-width: 928.8px;
-  height: 500px;
   margin: 0 auto;
   /* Added */
   float: none;
@@ -28,15 +39,32 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .card-img-top {
-  height: 55%;
   background-color: #2eca7f;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
-.card-img-overlay {
+.card--active {
+  display: block;
+  position: relative;
+  visibility: visible;
+  opacity: 1;
+}
+
+#home__top {
+  height: 280px;
+}
+#home__overlay {
   position: absolute;
   left: 33%;
   top: 10%;
+}
+
+#resume__top {
+  height: 117px;
+}
+#resume__overlay {
+  position: absolute;
+  top: 15px;
 }
 
 .profile__avatar {
@@ -62,7 +90,7 @@ body {
   padding-left: 8px;
 }
 .profile__content {
-  padding: 20px 50px 50px;
+  padding: 20px 50px 20px 50px;
 }
 .profile__content--header {
   font-size: 1.5rem;

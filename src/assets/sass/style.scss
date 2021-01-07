@@ -13,6 +13,21 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+.nav{
+    &-link::after{
+        width: 24px;
+    }
+    &--active::after{
+        content: "";
+        border: solid $primarycolor 1px;
+        width: 24px;
+        margin: auto;
+        // margin-top: 4px;
+        display: block;
+    }
+}
+
+
 .footer{
     flex-shrink: 0;
     text-align: center;
@@ -21,10 +36,12 @@ body{
 
 .card{
     
+    display:none;//if not active, hide the card.
+
     width: 90%;
     max-width: 1032px * 0.9;
 
-    height: 500px;
+    
 
     // center aligned
     // https://stackoverflow.com/questions/39031224/how-to-center-cards-in-bootstrap-4
@@ -37,18 +54,43 @@ body{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); //shadow
 
     &-img-top{
-        height: 55%;
+        
         background-color: $primarycolor;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
     }
 
-    &-img-overlay{
+    
+
+    &--active{
+        display: block;
+        position: relative;
+        visibility: visible;
+        opacity: 1;
+    }
+
+}
+
+#home{
+    // height: 500px;//for home page
+    &__top{
+        height: 280px;
+    }
+    &__overlay{
         position: absolute;
         left:33%;
         top:10%;
     }
+}
 
+#resume{
+    &__top{
+        height: 117px;
+    }
+    &__overlay{
+        position: absolute;
+        top:15px;
+    }
 }
 
 .profile{
@@ -75,7 +117,7 @@ body{
         padding-left: 8px;
     }
     &__content{
-        padding: 20px 50px 50px;
+        padding: 20px 50px 20px 50px;
 
         &--header{
             font-size: 1.5rem;

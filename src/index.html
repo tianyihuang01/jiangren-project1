@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/css/font-awesome.css">
     <link rel="stylesheet" href="assets/sass/style.css">
     <script src="assets/js/bootstrap.js"></script>
-
+    <script src="assets/js/main.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -22,7 +22,7 @@
               <div class="collapse navbar-collapse align-items-center" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto align-items-center">
                   <li class="nav-item">
-                    <a class="nav-link" href="#home">Home</a>
+                    <a class="nav-link nav--active" href="#home">Home</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#resume">Resume</a>
@@ -42,11 +42,11 @@
           </nav>
     </header>
     <main>
-        <section >
-            <div class="card" id="home">
-                <img class="card-img-top" src="assets/images/main_bg.png">
+        <section id="home">
+            <div class="card card--active">
+                <img class="card-img-top" id="home__top" src="assets/images/main_bg.png">
                 <img class="profile__avatar" src="assets/images/photo.png">
-                <div class="card-img-overlay text-white text-center">
+                <div class="card-img-overlay text-white text-center" id="home__overlay">
                   <h2 class="card-title profile__name">John Doe</h2>
                   <p class="card-text profile__title">Web Designer</p>
                   <button type="button" class="btn btn-light fa fa-twitter profile__media"></button>
@@ -81,9 +81,68 @@
             </div>
         </section>
         <section id="resume">
-            <div>
-                
+            <div class="card card--active">
+              <img class="card-img-top" id="resume__top" src="assets/images/main_bg.png">
+              <div class="card-img-overlay text-white text-center" id="resume__overlay">
+                <h2 class="card-title profile__name">RESUME</h2>
+              </div>
+              <!-- education + experenice -->
+              <div class="card-body">
+                <div class="row profile__content">
+                  <div class="col-6">
+                    <h3 class="profile__content--header">About <span class="theme--color">Me</span></h3>
+                    <p class="profile__content--body">Hello! I’m John Doe. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                      Aenean fermentum ullamcorper sem, at placerat dolor volutpat ac.
+                      Duis nulla enim, condimentum nec ultricies.</p>
+                  </div>
+
+                  <div class="col-6">
+                    <dl>
+                      <dt>Age</dt>
+                      <dd>29</dd>
+                      <dt>Residence</dt>
+                      <dd>Australia</dd>
+                      <dt>Address</dt>
+                      <dd>Level 3 / 57 Coronation Drive, Brisbane</dd>
+                      <dt>e-mail</dt>
+                      <dd><a href="mailto:email@example.com" class="theme--color">info@jiangren.com</a></dd>
+                      <dt>Phone</dt>
+                      <dd>+0123 123 456 789</dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+              <!-- design + coding skills -->
+              <div class="card-body">
+                <div class="row profile__content">
+                  <div class="col-6">
+                    <h3 class="profile__content--header">About <span class="theme--color">Me</span></h3>
+                    <p class="profile__content--body">Hello! I’m John Doe. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                      Aenean fermentum ullamcorper sem, at placerat dolor volutpat ac.
+                      Duis nulla enim, condimentum nec ultricies.</p>
+                  </div>
+                  
+                  <div class="col-6">
+                    <dl>
+                      <dt>Age</dt>
+                      <dd>29</dd>
+                      <dt>Residence</dt>
+                      <dd>Australia</dd>
+                      <dt>Address</dt>
+                      <dd>Level 3 / 57 Coronation Drive, Brisbane</dd>
+                      <dt>e-mail</dt>
+                      <dd><a href="mailto:email@example.com" class="theme--color">info@jiangren.com</a></dd>
+                      <dt>Phone</dt>
+                      <dd>+0123 123 456 789</dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+
             </div>
+            
+
+
         </section>
         <section id="services">
             <div>
