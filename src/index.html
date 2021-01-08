@@ -6,8 +6,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/font-awesome.css">
     <link rel="stylesheet" href="assets/sass/style.css">
-    <script src="assets/js/bootstrap.js"></script>
-    <script src="assets/js/main.js"></script>
+    
     <title>Document</title>
 </head>
 <body>
@@ -22,19 +21,19 @@
               <div class="collapse navbar-collapse align-items-center" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto align-items-center">
                   <li class="nav-item">
-                    <a class="nav-link nav--active" href="#home">Home</a>
+                    <a class="nav-link" href="home">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#resume">Resume</a>
+                    <a class="nav-link" href="resume">Resume</a>
                   </li>          
                   <li class="nav-item">
-                    <a class="nav-link" href="#services">Services</a>
+                    <a class="nav-link" href="services">Services</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#blog">Blog</a>
+                    <a class="nav-link" href="blog">Blog</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
+                    <a class="nav-link" href="contact">Contact</a>
                   </li>
                 </ul>
               </div>
@@ -42,8 +41,9 @@
           </nav>
     </header>
     <main>
-        <section id="home">
-            <div class="card card--active">
+        <!-- HOME page -->
+        <section >
+            <div id="home" class="card">
                 <img class="card-img-top" id="home__top" src="assets/images/main_bg.png">
                 <img class="profile__avatar" src="assets/images/photo.png">
                 <div class="card-img-overlay text-white text-center" id="home__overlay">
@@ -80,11 +80,13 @@
 
             </div>
         </section>
-        <section id="resume">
-            <div class="card card--active">
+
+        <!-- RESUME page -->
+        <section >
+            <div id="resume" class="card">
               <img class="card-img-top" id="resume__top" src="assets/images/main_bg.png">
               <div class="card-img-overlay text-white text-center" id="resume__overlay">
-                <h2 class="card-title profile__name">RESUME</h2>
+                <h2 class="card-title profile__name">Resume</h2>
               </div>
               <!-- education + experenice -->
               <div class="card-body">
@@ -122,14 +124,8 @@
                           interdum sed tortor.
                         </p>
                       </div>
-
-
                     </div>
-
-
-                    
                   </div>
-
                   <div class="col-6">
                     <h3 class="resume__title">Experience</h3>
                     <div class="resume__card--outer">
@@ -165,9 +161,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
               <!-- design + coding skills -->
-                <div class="row profile__content">
                   <div class="col-6">
                     <h3 class="resume__title">Design 
                       <span class="theme--color">Skills</span>
@@ -203,29 +197,97 @@
                     <div class="bar">
                       <div class="skill skill--5"></div>
                     </div>
-
-
                   </div>
                 </div>
               </div>
+            </div>
+        </section>
+        <!-- SERVICE page -->
+        <section >
+            <div id="services" class="card">
+              <img class="card-img-top" id="resume__top" src="assets/images/main_bg.png">
+              <div class="card-img-overlay text-white text-center" id="resume__overlay">
+                <h2 class="card-title profile__name">Services</h2>
+              </div>
+              <div class="card-body profile__content">
+                <!-- MY SERVICES section -->
+                <h3 class="services__title">Design 
+                  <span class="theme--color">Skills</span>
+                </h3>
+                <div class="row">
+                  <div class="col-4">
+                    <div class="servicesItem">
+                      <div class="servicesItem__imgContainer">
+                        <img class="servicesItem__img" src="assets/images/html5.png">
+                      </div>
+                      <h4 class="servicesItem__title">
+                        HTML5
+                      </h4>
+                      <div class="servicesItem__desc">
+                        Hypertext Markup Language (HTML) is the standard markup language 
+                        for documents designed to be displayed in a web browser.
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="col-4">
+                    <div class="servicesItem">
+                      <div class="servicesItem__imgContainer">
+                        <img class="servicesItem__img" src="assets/images/css3.png">
+                      </div>
+                      <h4 class="servicesItem__title">
+                        CSS3
+                      </h4>
+                      <div class="servicesItem__desc">
+                        Cascading Style Sheets (CSS) is a style sheet language used for 
+                        describing the presentation of a document written in a markup language like HTML.
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="col-4">
+                    <div class="servicesItem">
+                      <div class="servicesItem__imgContainer">
+                        <img class="servicesItem__img" src="assets/images/js.png">
+                      </div>
+                      <h4 class="servicesItem__title">
+                        JavaScript
+                      </h4>
+                      <div class="servicesItem__desc">
+                        JavaScript often abbreviated as JS, is a programming language 
+                        that conforms to the ECMAScript specification.
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <!-- CLIENTS section -->
+                <h3 class="services__title">Clients</span>
+                </h3>
+
+                <div class="row">
+                  <div class="col-4 servicesItem__imgContainer--2">
+                    <img class="servicesItem__img--2" src="assets/images/rea.png">
+                  </div>
+                  <div class="col-4 servicesItem__imgContainer--2">
+                    <img class="servicesItem__img--2" src="assets/images/seek.png">
+                  </div>
+                  <div class="col-4 servicesItem__imgContainer--2">
+                    <img class="servicesItem__img--2" src="assets/images/rea.png">
+                  </div>
+                </div>
+
+              </div>
 
             </div>
-            
-
-
         </section>
-        <section id="services">
-            <div>
+        <section >
+            <div id="blog">
                 
             </div>
         </section>
-        <section id="blog">
-            <div>
-                
-            </div>
-        </section>
-        <section  id="contact">
-            <div>
+        <section  >
+            <div id="contact">
                 
             </div>
         </section>
@@ -234,5 +296,7 @@
         © 2017 All rights reserved. Designed by
         <a href="http://jiangren.com.au" class="theme--color">JiangRen</a> 
     </footer>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-$primarycolor: #2eca7f;
+$primarycolor: rgba(11, 58, 102, 0.75); //#2eca7f;
 
 .theme{
     &--color{
@@ -14,16 +14,24 @@ body{
 }
 
 .nav{
-    &-link::after{
-        width: 24px;
+    &-link{
+        transition: 1s;
+        &::after{
+            content: "";
+            border: solid#f8f9fa 1px;
+            width: 24px;
+            margin: auto;
+            // margin-top: 4px;
+            display: block;
+        }
+        &:hover::after{
+            border: solid $primarycolor 1px;
+            transition: 1s;
+        }
     }
     &--active::after{
-        content: "";
         border: solid $primarycolor 1px;
-        width: 24px;
-        margin: auto;
-        // margin-top: 4px;
-        display: block;
+
     }
 }
 
@@ -91,6 +99,14 @@ body{
         width: 250px;
         border: solid white 5px; //add white border
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); //shadow
+        transition: 1s;
+
+        &:hover{
+            position: absolute;
+            left: 7%;
+            top: 6%;
+            
+        }
     }
     &__name{
         font-size: 3rem;
@@ -145,8 +161,9 @@ body{
         &--inner{
             // border: solid gray 2px;
             position: relative; //加了这个，下方的before/after可以用absolute
+            border: lightgray solid 0.5px;
             border-left: solid $primarycolor 2px;
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); //shadow
+            transition: 0.5s;
             margin: 0 0 20px 20px;
             padding: 15px 20px 10px;
             &::before{
@@ -169,6 +186,9 @@ body{
                 background-color: white;
                 left: -30px;
                 top: 14px;
+            }
+            &:hover{
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); //shadow
             }
         }
         &--title{
@@ -220,6 +240,7 @@ body{
     position: absolute;
     height: 100%;
     background: $primarycolor;
+
     &--1{
         width: 85%;
     }
@@ -235,8 +256,77 @@ body{
     &--5{
         width: 85%;
     }
+    // &--test{
+    //     width: 95%;
+    //     background: yellowgreen;
+    //     transition: width 10s;
+    // }
 }
 
+
+.services{
+    &__title{
+        @extend .resume__title;
+        // padding-left: 50px;
+    }
+
+    &Item{
+      display: flex;
+      flex-direction: column;
+      
+      &__imgContainer{
+          border-radius: 50%;
+          background-color: rgba(0, 0, 0, 0.03);
+          width: 125px;
+          height: 125px;
+          position: relative;
+          margin: 0 auto;
+          transition: 0.5s;
+          &:hover{
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); //shadow
+            position: relative;
+            margin-bottom: 10px;
+            margin-top: -10px;
+          }        
+        
+
+          &--2{
+            position: relative;
+            margin: 0 auto;
+            height: 125px;
+          }
+      }
+      &__img{
+        //   https://www.freecodecamp.org/news/how-to-center-anything-with-css-align-a-div-text-and-more/
+          width: 55px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          
+          &--2{
+              //https://www.w3schools.com/howto/howto_css_image_center.asp
+            //   width: 150px;
+            //   display: block;
+            //   margin: auto;
+            @extend .servicesItem__img;
+            width: 150px;
+            box-sizing: border-box;
+          }
+      }
+      &__title{
+          @extend .resume__card--title;
+          text-align: center;
+          padding: 10px 0;
+      }
+      &__desc{
+          @extend .resume__card--body;
+          color: #9e9e9e;
+          text-align: center;
+      }
+
+    }
+}
 
 // https://stackoverflow.com/questions/1713048/how-to-style-dt-and-dd-so-they-are-on-the-same-line
 dl {
