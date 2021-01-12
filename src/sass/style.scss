@@ -35,13 +35,11 @@ body{
     padding-top: 60px;
 }
 
-footer{
-//     position:absolute; 
-//     bottom:0px; 
-//     height:30px; 
-//     left:0px; 
-//     right:0px; 
-
+.footer{
+    flex-shrink: 0;
+    text-align: center;
+    font-size: 15px;
+    z-index: -1;
 }
 
 .nav{
@@ -64,14 +62,6 @@ footer{
         border: solid $primarycolor 1px;
 
     }
-}
-
-
-.footer{
-    flex-shrink: 0;
-    text-align: center;
-    font-size: 15px;
-    z-index: -1;
 }
 
 .card{
@@ -153,6 +143,17 @@ footer{
         width: 32px;
         height: 32px;
         padding-left: 8px;
+        // margin-left: auto;
+        // margin-right: auto;
+        &--fb{
+            @extend .profile__media;
+            padding-left: 10px;
+        }
+        // &--map{
+        //     @extend .profile__media;
+        //     padding-left: 10px;
+        //     color: $primarycolor;
+        // }
     }
     &__content{
         padding: 20px 50px 20px 50px;
@@ -441,6 +442,61 @@ footer{
     font-weight: bold;
 }
 
+.contact{
+    &__map{
+        overflow:hidden;
+        padding-bottom:56.25%;
+        position:relative;
+        height:0;
+
+        iframe{
+            left:0;
+            top:0;
+            height:100%;
+            width:100%;
+            position:absolute;
+        }
+    }
+    &__info{
+        padding: 5px 0;
+        &--des{
+            padding-left: 20px;
+            font-size: 15px;
+        }
+    }
+    &__form{
+        &--user{
+            padding-left: 2px;
+        }
+    }
+    
+}
+
+.input-group{
+    margin: 25px 0;
+
+    &-text{
+        width: 40px;
+    }
+}
+
+.btn{
+    &-custom{
+        color: #fff;
+        background-color: $primarycolor;
+        border-color: $primarycolor;
+        margin: 25px 0;
+    }
+    &--text{
+        font-size: 15px;
+    }
+}
+
+// .iframe{
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+// }
 
 // https://stackoverflow.com/questions/1713048/how-to-style-dt-and-dd-so-they-are-on-the-same-line
 dl {

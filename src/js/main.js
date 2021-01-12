@@ -30,16 +30,16 @@ function main(){
 
         if(pervious){
             let perviousPage = document.querySelector('#' + pervious);
-            console.log(pervious);
-            console.log(perviousPage);
+            // console.log(pervious);
+            // console.log(perviousPage);
             perviousPage.classList.remove(className);
         }
 
         let page = document.querySelector('#' + current);
-        console.log(current);
-        console.log(page);
+        // console.log(current);
+        // console.log(page);
         page.classList.add(className);
-        console.log(page);
+        // console.log(page);
 
     }
 
@@ -49,12 +49,12 @@ function main(){
         if(pervious){
             let perviousNav = document.querySelector('[href="' + pervious + '"]');
             // console.log(pervious);
-            console.log(perviousNav);
+            // console.log(perviousNav);
             perviousNav.classList.remove(className);
         }
 
         let navItem = document.querySelector('[href="' + current + '"]');
-        console.log(navItem);
+        // console.log(navItem);
         navItem.classList.add(className);
 
     }
@@ -67,4 +67,21 @@ main();
 //     skill.classList.add('skill--test');
 // })
     
-    
+// https://getbootstrap.com/docs/4.5/components/forms/#validation
+(function() {
+    'use strict';
+    window.addEventListener('load', function() {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
